@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MvcMusicStore.Models;
 
 namespace MvcMusicStore.Controllers
 {
@@ -24,11 +25,12 @@ namespace MvcMusicStore.Controllers
         }
 
         // GET: /Store/Details/<ID>
-        public string Details(int id)
+        public ActionResult Details(int id)
         {
             // Thanks to type-checking, the user input is already sanitizied
-            string message = "Store.Details, ID = " + id;
-            return message;
+            var album = new Album { Title = "Album " + id };
+
+            return View(album);
         }
     }
 }
