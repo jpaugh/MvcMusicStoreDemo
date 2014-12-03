@@ -30,8 +30,8 @@
         <header>
             <h1>ASP.NET MVC Music Store</h1>
             <ul id="navlist">
-                <li><a href="/" id="current">Home</a></li>
-                <li><a href="/Store/">Store</a></li>
+                <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @id = "current" })</li>
+                <li>@Html.ActionLink("Store", "Index", "Store")</li>
             </ul>
         </header>
 
