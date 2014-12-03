@@ -23,9 +23,12 @@ namespace MvcMusicStore.Controllers
             return message;
         }
 
-        public string Details()
+        // GET: /Store/Details/<ID>
+        public string Details(int id)
         {
-            return "Hello from Store.Details()";
+            // Thanks to type-checking, the user input is already sanitizied
+            string message = "Store.Details, ID = " + id;
+            return message;
         }
     }
 }
